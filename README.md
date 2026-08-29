@@ -4,13 +4,13 @@ Personal collection of reusable Agent Skills. The copies in this repository are 
 
 ## Included skills
 
-| Skill | Purpose |
-| --- | --- |
-| [`shuorenhua`](skills/shuorenhua/) | Rewrites Chinese and English text to remove formulaic AI phrasing while preserving facts, terminology, scope, and attribution. |
-| [`no-negative-echo`](skills/no-negative-echo/) | Finalizes user-facing artifacts without carrying rejected, session-only alternatives into filenames, metadata, commits, or handoffs. |
-| [`cyclomatic-complexity`](skills/cyclomatic-complexity/) | Measures cyclomatic complexity and guides behavior-preserving refactors of branching code. |
+| Skill | Purpose | Original project |
+| --- | --- | --- |
+| [`shuorenhua`](skills/shuorenhua/) | Rewrites Chinese and English text to remove formulaic AI phrasing while preserving facts, terminology, scope, and attribution. | [MrGeDiao/shuorenhua](https://github.com/MrGeDiao/shuorenhua) |
+| [`no-negative-echo`](skills/no-negative-echo/) | Finalizes user-facing artifacts without carrying rejected, session-only alternatives into filenames, metadata, commits, or handoffs. | [LB623/no-negative-echo](https://github.com/LB623/no-negative-echo) |
+| [`cyclomatic-complexity`](skills/cyclomatic-complexity/) | Measures cyclomatic complexity and guides behavior-preserving refactors of branching code. | [saurabhkumar8112/cyclomatic-complexity-skill](https://github.com/saurabhkumar8112/cyclomatic-complexity-skill) |
 
-Each skill is self-contained under `skills/<name>/`. Supporting references, scripts, assets, and evaluation files are kept with the corresponding `SKILL.md` so relative links continue to work.
+Each skill is self-contained under `skills/<name>/`. Its directory contains `SKILL.md`, the files loaded or referenced during normal use, and the original license.
 
 ## Install
 
