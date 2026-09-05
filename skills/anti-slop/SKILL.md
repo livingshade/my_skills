@@ -5,6 +5,8 @@ description: Make ordinary Chinese and English model output direct, literal, nat
 
 # Anti Slop
 
+**TLDR**: Remove all mannered prose.
+
 Write like a competent person addressing this reader about this specific subject.
 
 ## Lead with the point
