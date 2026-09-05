@@ -1,6 +1,6 @@
 # my_skills
 
-Personal collection of reusable Agent Skills. The copies in this repository are the versions used with SGLang Router.
+Personal collection of reusable Agent Skills.
 
 ## Included skills
 
