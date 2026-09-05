@@ -1,0 +1,7 @@
+interface:
+  display_name: "Anti Slop"
+  short_description: "Write direct, literal prose with restrained formatting."
+  default_prompt: "Use $anti-slop to rewrite this in clear, direct prose."
+
+policy:
+  allow_implicit_invocation: true

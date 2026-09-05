@@ -1,53 +1,37 @@
 ---
 name: direct-result
-description: Skip unrequested defensive verification and testing after operations or code changes, while honoring explicit requests for reviews or checks. Use when the user asks for direct execution, no verification, no tests, or fewer defensive checks.
+description: Complete requested work directly, keep changes within scope, and skip unrequested verification or testing. Use when the user asks for action, wants fewer interruptions, or asks for the result without extra process.
 ---
 
 # Direct Result
 
-Favor the shortest path from the requested action to the delivered result.
+Complete the requested outcome with the fewest necessary steps.
 
-## Do the requested action once
+## Treat a request for action as authorization to act
 
-- Perform the primary action needed to produce the requested result.
-- When the user explicitly requests a review, test, validation, audit, verification, or post-operation check, treat it as part of the primary action and perform it as requested.
-- After that action returns, stop operating and report its direct result.
-- Do not add unrequested follow-up commands, tool calls, or reads whose main purpose is gaining confidence that the action worked.
-- Do not retry a successful action merely to confirm it.
+- Requests such as "can you," "help me," or "I want to" mean do the work when the intended action is clear.
+- Make routine judgment calls from the request and surrounding context. Ask only when different reasonable interpretations would materially change the result or risk.
+- Complete all work that does not depend on a missing answer before asking a necessary question.
+- Do not stop at an acknowledgment, plan, analysis of how to proceed, or offer to continue when the user asked for the work itself.
+- If the user asks for an explanation, diagnosis, review, or status report without asking for a change, deliver that assessment and do not mutate the target.
 
-## Skip unrequested post-operation verification
+## Keep the scope exact
 
-Unless the user explicitly requests them, do not perform defensive checks such as:
+- The user's request, or a plan the user approved, defines the deliverable. Do not quietly narrow, widen, or substitute it.
+- Do not fix, optimize, document, or extend adjacent work unless the requested result cannot function without it.
+- Prefer targeted edits over whole-file rewrites when both produce the same result.
+- Preserve unrelated user changes and existing external state.
+- Risky, destructive, irreversible, or materially different actions still require the authorization appropriate to that action.
 
-- querying status, state, health, process, job, deployment, repository, or endpoint state after the action;
-- reopening or rereading written files, records, messages, pages, or configuration;
-- comparing diffs, metadata, timestamps, sizes, counts, or before/after state;
-- calculating or comparing hashes, checksums, signatures, or file-content fingerprints;
-- checking file existence or searching for the produced content after writing it;
-- running validation, audit, smoke-check, dry-run, or consistency-check commands;
-- adding extra retries, waits, polling, or fallback attempts solely as verification.
+## Perform only the checks the task needs
 
-Do not describe the result as verified, validated, tested, confirmed, or proven unless the requested checks actually produced that result. Report only what the primary operation directly returned. If it returned an error or ambiguous result, state that plainly without launching unrequested verification.
+- Treat an explicit request for review, tests, validation, audit, verification, or confirmation as part of the requested work.
+- Otherwise, do not add tests, linters, builds, smoke checks, status queries, readbacks, repeated tool calls, or retries whose main purpose is gaining confidence after a successful operation.
+- A prerequisite read or check is appropriate when it is needed to understand the target, protect unrelated work, satisfy authorization, or perform the action correctly.
+- Never describe a result as verified, tested, or confirmed unless the corresponding check actually ran and succeeded.
 
-## Do not add unrequested code testing
+## Finish with the result
 
-For code creation or modification, unless the user explicitly requests otherwise:
-
-- Do not write, update, generate, or run tests of any kind, including unit, integration, end-to-end, regression, snapshot, property, performance, acceptance, or smoke tests.
-- Do not run test suites, linters, type checkers, static analyzers, format checks, coverage tools, compile checks, or builds whose purpose is to validate the change.
-- Do not manually exercise the changed behavior, start an application to inspect it, or inspect logs as a substitute for tests.
-- Do not add assertions, diagnostic probes, temporary instrumentation, or verification-only code.
-
-If the user explicitly requests tests, validation, auditing, review, verification, or confirmation, perform the requested work normally. Do not ask the user to suspend this skill. Keep the checks within the requested scope and do not append additional defensive checks afterward.
-
-## Keep necessary boundaries
-
-- A prerequisite read or check is allowed only when it is necessary to understand the target, avoid overwriting unrelated user work, satisfy an authorization requirement, or perform the requested action at all. Keep it minimal and do not repeat it afterward.
-- A build, conversion, export, or render is allowed when it is the requested deliverable or the operation that produces the deliverable; do not run it again to verify the output.
-- An explicit user request for review or verification overrides this skill's default preference to skip it.
-- Follow higher-priority safety, permission, destructive-action, and mandatory tool-workflow requirements. This skill does not authorize bypassing them.
-- Never claim success that the primary tool or command did not report.
-
-## Report concisely
-
-Return the result, changed artifact, or direct operation output. When checks were explicitly requested, include their results. Otherwise, mention that checks or tests were skipped only when that fact materially affects the handoff or the user asks.
+- Once the requested action and any requested checks are complete, stop operating.
+- Report the actual result and any material limitation returned by the operation.
+- Do not end with a promise, a list of work still to do, or a question offering work that was already in scope.

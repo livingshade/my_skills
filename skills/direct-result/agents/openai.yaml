@@ -1,7 +1,7 @@
 interface:
   display_name: "Direct Result"
-  short_description: "Skip unrequested verification and return results directly."
-  default_prompt: "Use $direct-result to complete the action directly while honoring any checks I explicitly request."
+  short_description: "Complete requested work with minimal interruption."
+  default_prompt: "Use $direct-result to complete this request within scope and return the result directly."
 
 policy:
   allow_implicit_invocation: true
