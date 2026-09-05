@@ -10,7 +10,8 @@ Personal collection of reusable Agent Skills. The copies in this repository are 
 | [`no-negative-echo`](skills/no-negative-echo/) | Finalizes user-facing artifacts without carrying rejected, session-only alternatives into filenames, metadata, commits, or handoffs. | [LB623/no-negative-echo](https://github.com/LB623/no-negative-echo) |
 | [`cyclomatic-complexity`](skills/cyclomatic-complexity/) | Measures cyclomatic complexity and guides behavior-preserving refactors of branching code. | [saurabhkumar8112/cyclomatic-complexity-skill](https://github.com/saurabhkumar8112/cyclomatic-complexity-skill) |
 | [`karpathy-guidelines`](skills/karpathy-guidelines/) | Reduces common LLM coding mistakes through simplicity, surgical changes, explicit assumptions, and verifiable goals. | [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) |
-| [`tdd`](skills/tdd/) | Guides test-driven development around behavioral seams, vertical slices, and meaningful tests. | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| [`test-driven-development`](skills/tdd/) | Guides test-first development with a feasibility gate and practical rules for meaningful tests. | Local personal skill snapshot |
+| [`direct-result`](skills/direct-result/) | Executes requested work directly and skips unrequested defensive checks and tests. | Local personal skill snapshot |
 
 Each skill is self-contained under `skills/<name>/`. Its directory contains `SKILL.md`, the files loaded or referenced during normal use, and any license file shipped by the upstream project. When upstream declares the license only in skill metadata, that declaration remains in `SKILL.md`.
 
