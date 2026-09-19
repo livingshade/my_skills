@@ -6,6 +6,7 @@ Personal collection of reusable Agent Skills.
 
 | Skill | Purpose | Source |
 | --- | --- | --- |
+| [`strict-code-review`](skills/strict-code-review/) | Reviews PRs with technical context, a P0-P4 rubric, goal completeness, and evidence-based code quality analysis. | [zhaochenyang20/sglang-diffusion-routing issue #32](https://github.com/zhaochenyang20/sglang-diffusion-routing/issues/32) |
 | [`anti-slop`](skills/anti-slop/) | Keeps ordinary model output direct, literal, natural, and appropriately formatted. | [OpenAI GPT-6 Astra model guidance](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra) · [Anthropic Claude Fable 5.1 prompting guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1) |
 | [`direct-result`](skills/direct-result/) | Completes requested work within scope and skips unrequested verification and testing. | [OpenAI GPT-6 Astra model guidance](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra) · [Anthropic Claude Fable 5.1 prompting guide](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1) |
 | [`no-negative-echo`](skills/no-negative-echo/) | Finalizes user-facing artifacts without carrying rejected, session-only alternatives into filenames, metadata, commits, or handoffs. | [LB623/no-negative-echo](https://github.com/LB623/no-negative-echo) |

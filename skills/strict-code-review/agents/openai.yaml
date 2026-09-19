@@ -1,0 +1,4 @@
+interface:
+  display_name: "Strict Code Review"
+  short_description: "Review code with a four-part report and P0-P4 rubric."
+  default_prompt: "Use $strict-code-review to review this PR with technical context, actionable findings, goal completeness, and evidence-based code quality analysis."
