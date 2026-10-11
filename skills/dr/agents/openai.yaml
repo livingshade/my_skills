@@ -1,0 +1,7 @@
+interface:
+  display_name: "DR"
+  short_description: "Complete work directly and deliver the selected result."
+  default_prompt: "Use $dr to complete this request within scope and deliver the selected result with a direct judgment and reasons."
+
+policy:
+  allow_implicit_invocation: true
